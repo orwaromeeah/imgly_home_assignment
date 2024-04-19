@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		42952BCD2BD27CDD0021C318 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42952BCC2BD27CDD0021C318 /* AppDelegate.swift */; };
 		42952BCF2BD27CDD0021C318 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42952BCE2BD27CDD0021C318 /* SceneDelegate.swift */; };
-		42952BD12BD27CDD0021C318 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42952BD02BD27CDD0021C318 /* ViewController.swift */; };
 		42952BD42BD27CDD0021C318 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42952BD22BD27CDD0021C318 /* Main.storyboard */; };
 		42952BD62BD27CE00021C318 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42952BD52BD27CE00021C318 /* Assets.xcassets */; };
 		42952BD92BD27CE00021C318 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42952BD72BD27CE00021C318 /* LaunchScreen.storyboard */; };
 		42952BE42BD27CE00021C318 /* imgly_home_assignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42952BE32BD27CE00021C318 /* imgly_home_assignmentTests.swift */; };
 		42952BEE2BD27CE00021C318 /* imgly_home_assignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42952BED2BD27CE00021C318 /* imgly_home_assignmentUITests.swift */; };
 		42952BF02BD27CE00021C318 /* imgly_home_assignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42952BEF2BD27CE00021C318 /* imgly_home_assignmentUITestsLaunchTests.swift */; };
+		42952BFF2BD27F480021C318 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42952BFE2BD27F480021C318 /* Model.swift */; };
+		42952C022BD281880021C318 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42952C012BD281880021C318 /* PhotoCollectionViewCell.swift */; };
+		42952C042BD2834F0021C318 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42952C032BD2834F0021C318 /* PhotoCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,6 @@
 		42952BC92BD27CDD0021C318 /* imgly_home_assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imgly_home_assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42952BCC2BD27CDD0021C318 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42952BCE2BD27CDD0021C318 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		42952BD02BD27CDD0021C318 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		42952BD32BD27CDD0021C318 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42952BD52BD27CE00021C318 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42952BD82BD27CE00021C318 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		42952BE92BD27CE00021C318 /* imgly_home_assignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = imgly_home_assignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42952BED2BD27CE00021C318 /* imgly_home_assignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imgly_home_assignmentUITests.swift; sourceTree = "<group>"; };
 		42952BEF2BD27CE00021C318 /* imgly_home_assignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imgly_home_assignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		42952BFE2BD27F480021C318 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		42952C012BD281880021C318 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		42952C032BD2834F0021C318 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +105,9 @@
 			children = (
 				42952BCC2BD27CDD0021C318 /* AppDelegate.swift */,
 				42952BCE2BD27CDD0021C318 /* SceneDelegate.swift */,
-				42952BD02BD27CDD0021C318 /* ViewController.swift */,
-				42952BD22BD27CDD0021C318 /* Main.storyboard */,
+				42952BFC2BD27F030021C318 /* Controller */,
+				42952BFD2BD27F1E0021C318 /* View */,
+				42952C002BD27F4E0021C318 /* Model */,
 				42952BD52BD27CE00021C318 /* Assets.xcassets */,
 				42952BD72BD27CE00021C318 /* LaunchScreen.storyboard */,
 				42952BDA2BD27CE00021C318 /* Info.plist */,
@@ -125,6 +130,31 @@
 				42952BEF2BD27CE00021C318 /* imgly_home_assignmentUITestsLaunchTests.swift */,
 			);
 			path = imgly_home_assignmentUITests;
+			sourceTree = "<group>";
+		};
+		42952BFC2BD27F030021C318 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				42952C032BD2834F0021C318 /* PhotoCollectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		42952BFD2BD27F1E0021C318 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				42952BD22BD27CDD0021C318 /* Main.storyboard */,
+				42952C012BD281880021C318 /* PhotoCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		42952C002BD27F4E0021C318 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				42952BFE2BD27F480021C318 /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42952BD12BD27CDD0021C318 /* ViewController.swift in Sources */,
+				42952C042BD2834F0021C318 /* PhotoCollectionViewController.swift in Sources */,
 				42952BCD2BD27CDD0021C318 /* AppDelegate.swift in Sources */,
+				42952C022BD281880021C318 /* PhotoCollectionViewCell.swift in Sources */,
 				42952BCF2BD27CDD0021C318 /* SceneDelegate.swift in Sources */,
+				42952BFF2BD27F480021C318 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +474,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LTXUQQMZY2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = imgly_home_assignment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -469,6 +502,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LTXUQQMZY2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = imgly_home_assignment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -571,7 +605,7 @@
 				42952BF22BD27CE00021C318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		42952BF32BD27CE00021C318 /* Build configuration list for PBXNativeTarget "imgly_home_assignment" */ = {
 			isa = XCConfigurationList;
@@ -580,7 +614,7 @@
 				42952BF52BD27CE00021C318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		42952BF62BD27CE00021C318 /* Build configuration list for PBXNativeTarget "imgly_home_assignmentTests" */ = {
 			isa = XCConfigurationList;
@@ -589,7 +623,7 @@
 				42952BF82BD27CE00021C318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		42952BF92BD27CE00021C318 /* Build configuration list for PBXNativeTarget "imgly_home_assignmentUITests" */ = {
 			isa = XCConfigurationList;
@@ -598,7 +632,7 @@
 				42952BFB2BD27CE00021C318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

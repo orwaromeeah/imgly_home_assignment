@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FWh-mH-JGu">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Collection View Controller-->
+        <scene sceneID="2rJ-iI-4zH">
+            <objects>
+                <collectionViewController id="q2N-KC-muG" customClass="PhotoCollectionViewController" customModule="imgly_home_assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" dataMode="prototypes" id="oPw-Uw-k4s">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Zoe-R4-5Of">
+                            <size key="itemSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="image_cell" id="9XV-56-bxa" customClass="photoCollectionViewCell" customModule="imgly_home_assignment" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="k3a-NR-Qbh">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="133"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="Z5x-bg-apj">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="133"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Z5x-bg-apj" secondAttribute="trailing" id="Fzv-U2-yup"/>
+                                        <constraint firstAttribute="bottom" secondItem="Z5x-bg-apj" secondAttribute="bottom" id="VB5-BU-awA"/>
+                                        <constraint firstItem="Z5x-bg-apj" firstAttribute="leading" secondItem="k3a-NR-Qbh" secondAttribute="leading" id="aRO-6K-dG4"/>
+                                        <constraint firstItem="Z5x-bg-apj" firstAttribute="top" secondItem="k3a-NR-Qbh" secondAttribute="top" id="c1p-zJ-dCB"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="photoImageView" destination="Z5x-bg-apj" id="s3q-a0-bU1"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="q2N-KC-muG" id="Zdf-Qf-pUF"/>
+                            <outlet property="delegate" destination="q2N-KC-muG" id="uvY-1e-GdU"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="EbW-4s-eai"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kDh-bW-EcB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="837" y="15"/>
+        </scene>
+        <!--IMG.LY-->
+        <scene sceneID="chi-vf-6sJ">
+            <objects>
+                <navigationController title="IMG.LY" automaticallyAdjustsScrollViewInsets="NO" id="FWh-mH-JGu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Npx-p7-vVr">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="AccentColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" name="AccentColor"/>
+                            <textAttributes key="titleTextAttributes"/>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="compactAppearance"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="q2N-KC-muG" kind="relationship" relationship="rootViewController" id="8a2-TY-VXl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWZ-JU-T7c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1" y="15"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image1" width="128" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
