@@ -48,7 +48,7 @@ class PhotoCollectionViewController: UICollectionViewController{
                     if let data = data, let image = UIImage(data: data) {
                    
                         DispatchQueue.main.async {
-                            print(image.greennessOfFirstPixel())
+                            
                            self.images.append(image)
                             if(self.images.count==16){
                                 self.Sortedimages = bubbleSortImagesByGreenness(self.images)
@@ -74,8 +74,8 @@ func bubbleSortImagesByGreenness(_ images: [UIImage]) -> [UIImage] {
     
     for i in 0..<sortedImages.count {
         for j in 1..<sortedImages.count - i {
-            let greenness1 = sortedImages[j-1].greennessOfFirstPixel()
-            let greenness2 = sortedImages[j].greennessOfFirstPixel()
+            let greenness1 = sortedImages[j-1].greennessOfLastPixel()
+            let greenness2 = sortedImages[j].greennessOfLastPixel()
             
             if greenness1 < greenness2 {
                 // Swap
@@ -94,7 +94,7 @@ func bubbleSortImagesByGreenness(_ images: [UIImage]) -> [UIImage] {
 //MARK: UIColloectionViewControllerDataSource :
 
 extension UIImage {
-    func greennessOfFirstPixel() -> CGFloat {
+    func greennessOfLastPixel() -> CGFloat {
         guard let cgImage = self.cgImage else { return 0 }
         
         let width = cgImage.width
@@ -116,7 +116,7 @@ extension UIImage {
         
         imageContext.draw(cgImage, in: CGRect(x: 0, y: 0, width: width, height: height))
         
-        let pixel = rawData
+        let pixel = rawData + (bytesPerRow * (height - 1))
         let red = CGFloat(pixel[0]) / 255.0
         let green = CGFloat(pixel[1]) / 255.0
         let blue = CGFloat(pixel[2]) / 255.0
