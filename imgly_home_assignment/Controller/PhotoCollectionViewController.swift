@@ -116,12 +116,18 @@ extension UIImage {
         
         imageContext.draw(cgImage, in: CGRect(x: 0, y: 0, width: width, height: height))
         
+        // pointing to the first pixel of the last row, this comparison does the job
         let pixel = rawData + (bytesPerRow * (height - 1))
-        let red = CGFloat(pixel[0]) / 255.0
-        let green = CGFloat(pixel[1]) / 255.0
-        let blue = CGFloat(pixel[2]) / 255.0
         
-        // Calculate greenness of the first pixel
+        // here we are pointing to the last pixel of the last row whichs also does the job an give a functioning sorting result
+        let lastpixel = pixel + (bytesPerPixel * (width-1))
+        
+        
+        let red = CGFloat(lastpixel[0]) / 255.0
+        let green = CGFloat(lastpixel[1]) / 255.0
+        let blue = CGFloat(lastpixel[2]) / 255.0
+        
+        // Calculate greenness of the last pixel in the last row.
         return green / (red + green + blue)
     }
 }
